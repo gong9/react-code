@@ -5,6 +5,12 @@
 export const UpdateQueue = {
   isBatchingUpdata: false,
   updatars: new Set(),
+  batchUpdate() {
+    for (const updatar of this.updatars) {
+      updatar.updataClassCompent();
+    }
+    this.isBatchingUpdata = false;
+  },
 };
 
 class Component {

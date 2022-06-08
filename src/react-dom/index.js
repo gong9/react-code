@@ -1,6 +1,6 @@
 const render = (vdom, container) => {
     const dom = createDom(vdom)
-    // 将dom放到container就可以了
+    container.appendChild(dom)
 }
 
 /**
